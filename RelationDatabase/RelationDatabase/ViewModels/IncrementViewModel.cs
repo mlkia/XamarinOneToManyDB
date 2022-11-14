@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MvvmHelpers.Commands;
+using System;
+using MvvmHelpers;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using Xamarin.Forms;
 
 namespace RelationDatabase.ViewModels
 {
-    public class IncrementViewModel : BindableObject
+    public class IncrementViewModel : ObservableObject
     {
         public IncrementViewModel() 
         {
@@ -27,6 +28,9 @@ namespace RelationDatabase.ViewModels
                 countDisplay = value;
                 OnPropertyChanged();
             }
+
+            //Optionally you can use this 👇 instead of the above, but you need first install MvvmHelpers Nuget packages. You nedd also change BindableObject to ObservableObject.
+            //set => SetProperty(ref countDisplay, value);
         }
         void OnIncrease()
         {
