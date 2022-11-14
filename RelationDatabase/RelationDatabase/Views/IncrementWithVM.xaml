@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:RelationDatabase.ViewModels"
+             x:Class="RelationDatabase.Views.IncrementWithVM"
+             x:DataType="viewModels:IncrementViewModel">
+    <!-- The DtatType ☝ is called 'compiled bindings' and this will give me check when I copmpilr my code. -->
+
+    <!-- Here we've set our binding context from ViewModels in our code in view instead do this in behind code.-->
+    <ContentPage.BindingContext>
+        <viewModels:IncrementViewModel />
+    </ContentPage.BindingContext>
+    <!--  -->
+    
+    <Grid RowDefinitions="*,Auto,Auto,*">
+
+        <Label
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            FontSize="Large"
+            Text="{Binding CountVMDisplay}" />
+
+        <Button
+            Command="{Binding IncreaseVMCount}"
+            Grid.Row="2" Text="Click Me!" />
+
+    </Grid>
+</ContentPage>

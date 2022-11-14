@@ -38,10 +38,10 @@ namespace RelationDatabase.Views
             await Shell.Current.GoToAsync(nameof(ArtikelEntryPage));
         }
 
-        async void OnArtikelPageClicked(object sender, EventArgs e)
+        async void OnIncrementWithVMPageClicked(object sender, EventArgs e)
         {
             // Navigate to the NoteEntryPage, without passing any data.
-            await Shell.Current.GoToAsync(nameof(ArtikelViewPage));
+            await Shell.Current.GoToAsync(nameof(IncrementWithVM));
         }
 
         async void OnIncrementPageClicked(object sender, EventArgs e)
