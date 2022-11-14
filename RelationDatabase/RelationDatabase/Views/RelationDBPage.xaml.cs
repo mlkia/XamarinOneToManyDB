@@ -43,8 +43,14 @@ namespace RelationDatabase.Views
             // Navigate to the NoteEntryPage, without passing any data.
             await Shell.Current.GoToAsync(nameof(ArtikelViewPage));
         }
-        
-        
+
+        async void OnIncrementPageClicked(object sender, EventArgs e)
+        {
+            // Navigate to the NoteEntryPage, without passing any data.
+            await Shell.Current.GoToAsync(nameof(Increment));
+        }
+
+
         async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.CurrentSelection != null)

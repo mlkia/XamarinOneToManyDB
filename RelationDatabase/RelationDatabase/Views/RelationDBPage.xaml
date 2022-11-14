@@ -9,6 +9,8 @@
                      Clicked="OnAddClicked" />
         <ToolbarItem Text="Artikel Page"
                      Clicked="OnArtikelPageClicked" />
+        <ToolbarItem Text="Increment Page"
+                     Clicked="OnIncrementPageClicked" />
     </ContentPage.ToolbarItems>
 
     <!-- Display notes in a list -->

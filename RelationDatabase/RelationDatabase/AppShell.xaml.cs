@@ -11,7 +11,8 @@ namespace RelationDatabase
             Routing.RegisterRoute(nameof(NoteEntryPage), typeof(NoteEntryPage));
             Routing.RegisterRoute(nameof(ArtikelEntryPage), typeof(ArtikelEntryPage));
             Routing.RegisterRoute(nameof(ArtikelViewPage), typeof(ArtikelViewPage));
-            
+            Routing.RegisterRoute(nameof(Increment), typeof(Increment));
+
         }
     }
 }
